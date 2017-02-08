@@ -13,6 +13,11 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+gem 'devise', '~> 4.2'
+
+group :production do
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
