@@ -2,16 +2,16 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
 	
 	def index
-		authorize @posts = Post.all
+		@posts = Post.all
 	end
 
 	def new
-		authorize @post = Post.new
+		@post = Post.new
 	end
 
 	def create
-		authorize @post = Post.new(post_params)
-		authorize @post.user_id = current_user.id
+		@post = Post.new(post_params)
+		@post.user_id = current_user.id
 
 		if @post.save
 			redirect_to @post, notice: 'Your post was created successfully'
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
 	def update
 		authorize @post
-
+		
 		if @post.update(post_params)
 			redirect_to @post, notice: 'Your post was edited successfully'
 		else
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
-    authorize @post.delete
+    @post.delete
     redirect_to posts_path, notice: 'Your post was deleted successfully'
 	end
 
@@ -49,6 +49,6 @@ class PostsController < ApplicationController
 	  end
 
 	  def set_post
-	  	authorize @post = Post.find(params[:id])
+	  	@post = Post.find(params[:id])
 	  end
 end

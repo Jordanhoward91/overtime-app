@@ -1,6 +1,6 @@
 # Overtime App
 
-## Key requirements: company needs documentation that salaried employees did or did not get overtime eachweek
+## Key requirement: company needs documentation that salaried employees did or did not get overtime each week
 
 ## Models
 - x Post -> date:date rationale:text
@@ -22,3 +22,4 @@
 
 ## Refactor TODOS:
 - Refactor user association integration test in post_spec
+- Refactor posts/_form for admin user with status

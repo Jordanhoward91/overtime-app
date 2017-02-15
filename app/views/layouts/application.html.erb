@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Overtime</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-	<%= csrf_meta_tags %>
+  <title>Overtime</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
-<body >
+<body>
 
 <div class="container">
 	<div class="row">
@@ -17,7 +17,7 @@
 	</div>
 </div>
 
-<%= js add_gritter(flash[:notice], title: "Overtime App Notification", sticky: false, image: :notice) %>
+<%= js add_gritter(flash[:notice], title: "Overtime App Notification", sticky: false) %>
 
 </body>
 </html>
